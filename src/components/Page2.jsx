@@ -521,7 +521,7 @@ const Home = () => {
     setNeto4kg(finalWeight);
   }, [Scales4Kg, container?.weightbin]);
   const submitEvent = ()=>{
-    if (waste.scales == null || waste.scales == undefined || (waste.scales == "4Kg" &&  (neto4Kg <= 0 || Scales4Kg?.weight4Kg <= 0 ) ) || (waste.scales == "50Kg" && (neto50Kg <= 0 || Scales50Kg.weight50Kg < 0)) )
+    if (waste.scales == null || waste.scales == undefined || (waste.scales == "4Kg" &&  (neto4Kg <= 0 || Scales4Kg?.weight4Kg <= 0 ) ) || (waste.scales == "50Kg" && (neto50Kg <= 0 || Scales50Kg.weight50Kg <= 0)) )
     {
       if ((waste.scales == "4Kg" &&  (neto4Kg == 0 || Scales4Kg?.weight4Kg == 0 ) ) || (waste.scales == "50Kg" && (neto50Kg == 0 || Scales50Kg.weight50Kg == 0)) )
       {
@@ -1815,7 +1815,7 @@ const Home = () => {
                     <Typography variant="h4" align="center" gutterBottom>
                       {parseFloat(
                         /*neto50Kg > neto4Kg ? neto50Kg : neto4Kg*/ getWeight()
-                      ).toFixed(2)}
+                      ).toFixed(3)}
                       Kg
                     </Typography>
                     <p>Data Timbangan Sudah Sesuai?</p>
